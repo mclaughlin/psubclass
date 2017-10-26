@@ -5,12 +5,12 @@ Simple script to output a class' built-in subclasses and sub-subclasses.
 Example (from the CLI):
 
 ```bash
-    ./psubclass.py [class name]
+    ./psubclass.py parent_class_name
 ```
 
 Example (from the REPL):
 
 ```python
     >>> import psubclass
-    >>> psubclass [class name]
+    >>> psubclass.main('parent_class_name')
 ```
