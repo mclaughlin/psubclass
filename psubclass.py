@@ -19,9 +19,7 @@ class Subclasses:
             for child in eval(parent).__subclasses__():
                 child = str(child)[8:-2:]
                 children.append(child)
-        except AttributeError as e:
-            pass
-        except NameError as e:
+        except (AttributeError, NameError) as e:
             pass
         return children
 
@@ -29,11 +27,12 @@ def main(parent):
     subclasses = Subclasses()
     children = subclasses.children(parent)
     for child in children:
-        print(child)
+        print('-'*40)
+        print(f'+ {child}')
         sub_subclasses = Subclasses()
         grandchildren = sub_subclasses.children(child)
         for grandchild in grandchildren:
-            print(f'\t{grandchild}')
+            print(f'  - {grandchild}')
 
 if __name__ == '__main__':
     main(sys.argv[1:2][0])
