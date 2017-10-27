@@ -16,9 +16,15 @@ class Subclasses:
         if children is None:
             children = []
         try:
-            for child in eval(parent).__subclasses__():
-                child = str(child)[8:-2:]
-                children.append(child)
+
+            children = str(child)[8:-2:] \
+                       for child in eval(parent).__subclasses__():
+
+            #above list comprehension same as:
+            #for child in eval(parent).__subclasses__():
+                #child = str(child)[8:-2:]
+                #children.append(child)
+
         except (AttributeError, NameError) as e:
             pass
         return children
