@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-"""Simple script to output a classes sub (or child) classes"""
+"""
+Simple script to output a classes sub (or child) classes
+"""
 
 import argparse
 import sys
@@ -13,16 +15,11 @@ class Subclasses:
     """
 
     def children(self, parent, children=None):
-        """
-        Method returns list containing subclasses of parent class
-        """
         if children is None:
             children = []
-
         try:
             children = [ str(child)[8:-2:] \
                          for child in eval(parent).__subclasses__() ]
-
         except (AttributeError, NameError) as e:
             pass
         return children
