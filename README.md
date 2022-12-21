@@ -1,6 +1,6 @@
 # psubclass
 
-Simple script to output a class' built-in subclasses and sub-subclasses.
+Simple script to output (in a pretty format) a class' subclasses.
 
 ```
 Usage:
