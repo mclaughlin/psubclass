@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Simple script to output (in a pretty format) a class' sub (or child) classes
+Simple script to output (in a pretty format) a class' subclasses.
 
 Usage:
     python3 psubclass.py <class_name>
