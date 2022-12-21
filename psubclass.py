@@ -71,10 +71,6 @@ def get_input():
 
 
 def main():
-    """
-    Get input and runs the script.
-    """
-
     class_name = get_input()
 
     # Find subclasses
